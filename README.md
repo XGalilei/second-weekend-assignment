@@ -8,7 +8,7 @@ A server-side calculator, with all calculator logic occuring **entirely** on the
 - [X] Two input elements for the values
 - [X] A submit button marked with `=`, which bundles the input into an object and sends it to the server via a POST
 - [X] A 'C' clear button, which clears the user input fields
-- [ ] A number of calculations, all done on the server
+- [X] A number of calculations, all done on the server
 - [ ] A GET request to return the actual calculation
 - [ ] A record of all math operations and solutions on the server
 - [ ] Displays a list of all previous calculations on the page when it loads via a GET request

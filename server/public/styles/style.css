@@ -1,3 +1,7 @@
 button {
     background-color: lightgray;
 }
+
+#last-calc {
+    font-size: 20px;
+}

@@ -23,7 +23,7 @@ app.get('/calculate', (req, res) => {
 app.post('/calculate', (req, res) => {
     let newCalc = req.body;
     calculate(newCalc);
-    calculations.push(req.body);
+    calculations.push(newCalc);
 });
 
 app.get('/history', (req, res) => {
@@ -31,17 +31,19 @@ app.get('/history', (req, res) => {
 });
 
 function calculate(obj) {
-    if(obj.operation === 'add') {
-        obj.result = obj.first + obj.second;
+    //parseInt only necessary for 'plus' operation, but added to the other
+    //three functions for clarity
+    if(obj.operation === 'plus') {
+        obj.result = parseInt(obj.first) + parseInt(obj.second);
     }
-    else if(obj.operation === 'subtract') {
-        obj.result = obj.first - obj.second;
+    else if(obj.operation === 'minus') {
+        obj.result = parseInt(obj.first) - parseInt(obj.second);
     }
-    else if(obj.operation === 'multiply') {
-        obj.result = obj.first * obj.second;
+    else if(obj.operation === 'times') {
+        obj.result = parseInt(obj.first) * parseInt(obj.second);
     }
-    else if(obj.operation === 'divide') {
-        obj.result = obj.first / obj.second;
+    else if(obj.operation === 'divided-by') {
+        obj.result = parseInt(obj.first) / parseInt(obj.second);
     }
 }
 

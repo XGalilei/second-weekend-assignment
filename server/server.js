@@ -35,15 +35,19 @@ function calculate(obj) {
     //three functions for clarity
     if(obj.operation === 'plus') {
         obj.result = parseInt(obj.first) + parseInt(obj.second);
+        obj.operation = '+';
     }
     else if(obj.operation === 'minus') {
         obj.result = parseInt(obj.first) - parseInt(obj.second);
+        obj.operation = '-';
     }
     else if(obj.operation === 'times') {
         obj.result = parseInt(obj.first) * parseInt(obj.second);
+        obj.operation = '*';
     }
     else if(obj.operation === 'divided-by') {
         obj.result = parseInt(obj.first) / parseInt(obj.second);
+        obj.operation = '/';
     }
 }
 

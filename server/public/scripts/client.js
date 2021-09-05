@@ -53,7 +53,7 @@ function appendHistory(history) {
 
 function appendResults(calc) {
     $('#last-calc').empty();
-    $('#last-calc').append(calcString(calc));
+    $('#last-calc').append(calc.result);
 
     $.ajax({
         method: 'GET',

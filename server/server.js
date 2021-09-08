@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const calculations = [];
 
@@ -12,8 +12,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('server/public'));
 
 //Used to run the server
-app.listen(PORT, () => {
-    console.log ('Server is running on port', PORT);
+app.listen(port, () => {
+    console.log ('Server is running on port', port);
 });
 
 app.get('/calculate', (req, res) => {
